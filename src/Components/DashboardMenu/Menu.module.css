@@ -1,7 +1,107 @@
 .menu {
-  display: flex;
-  flex-direction: column;
   width: 20%;
   height: 100%;
   background-color: rgb(22, 22, 69);
+  padding: 0 20px;
+}
+
+.show {
+  width: 40%;
+  height: 100%;
+  background-color: rgb(22, 22, 69);
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .show {
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 0;
+  }
+}
+
+.close {
+  display: none;
+  justify-content: end;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+@media (max-width: 768px) {
+  .close {
+    display: flex;
+  }
+}
+
+.close-icon {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.link div {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  margin: 20px 0px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.link h3 {
+  margin: 0 15px;
+  color: white;
+}
+
+.icon {
+  color: white;
+  font-size: 20px;
+}
+
+.link .focus {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  margin: 20px 0px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.link .text {
+  margin: 0 15px;
+  color: rgb(22, 22, 69);
+  transition: 0.5s;
+}
+
+.change-icon-color {
+  color: rgb(22, 22, 69);
+  font-size: 20px;
+  transition: 0.5s;
 }
